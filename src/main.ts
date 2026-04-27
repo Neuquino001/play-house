@@ -18,12 +18,12 @@ interface Paquete {
 }
 
 const actividades: Actividad[] = [
-  { id: 1, nombre: "Metegol", descripcion: "Ideal para jugar con tus amigos", icono: "🏆",  imagen: "https://images.unsplash.com/photo-1529336322266-4915f4295abc?w=400&h=300&fit=crop" },
-  { id: 2, nombre: "Sala de Fútbol", descripcion: "Matches intensos de Fútbol", icono: "⚽", imagen: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=400&h=300&fit=crop", instagram: "https://www.instagram.com/reel/DW48Wl8iJoZ/" },
-  { id: 3, nombre: "Simulador", descripcion: "Competencia de Carreras", icono: "🎮", imagen: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop", instagram: "https://www.instagram.com/reel/DWcQ9OHiDoL/" },
-  { id: 4, nombre: "Mesa de Cumpleaños", descripcion: "exceente lugar para comer con tus amigos", icono: "🎂", imagen: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=300&fit=crop", instagram: "https://www.instagram.com/reel/DWwc0TQkcAq/" },
-  { id: 5, nombre: "Karaoke", descripcion: "Canta tus hits favoritos", icono: "🎤", imagen: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=400&h=300&fit=crop", instagram: "https://www.instagram.com/p/DWw6pO_PMij/" },
-  { id: 6, nombre: "Sala de Maquillajes", descripcion: "Lugar para encontrarse con tu belleza", icono: "😍", imagen: "https://images.unsplash.com/photo-1622979135225-d2ba269fb1bd?w=400&h=300&fit=crop" },
+  { id: 1, nombre: "Metegol", descripcion: "Ideal para jugar con tus amigos", icono: "🏆",  imagen: "/play-house/metegol.jpg" },
+  { id: 2, nombre: "Sala de Fútbol", descripcion: "Matches intensos de Fútbol", icono: "⚽", imagen: "/play-house/futbol.png", instagram: "https://www.instagram.com/reel/DW48Wl8iJoZ/" },
+  { id: 3, nombre: "Simulador", descripcion: "Competencia de Carreras", icono: "🎮", imagen: "/play-house/simulador.png", instagram: "https://www.instagram.com/reel/DWcQ9OHiDoL/" },
+  { id: 4, nombre: "Mesa de Cumpleaños", descripcion: "exceente lugar para comer con tus amigos", icono: "🎂", imagen: "/play-house/salon.png", instagram: "https://www.instagram.com/reel/DWwc0TQkcAq/" },
+  { id: 5, nombre: "Karaoke", descripcion: "Canta tus hits favoritos", icono: "🎤", imagen: "/play-house/karaoke.jpg", instagram: "https://www.instagram.com/p/DWw6pO_PMij/" },
+  { id: 6, nombre: "Sala de Maquillajes", descripcion: "Lugar para encontrarse con tu belleza", icono: "😍", imagen: "/play-house/belleza.png" },
 ]
 
 const paquetes: Paquete[] = [
