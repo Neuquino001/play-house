@@ -6,7 +6,7 @@ interface Actividad {
   descripcion: string
   icono: string
   imagen: string
-  video?: string
+  instagram?: string
 }
 
 interface Paquete {
@@ -19,10 +19,10 @@ interface Paquete {
 
 const actividades: Actividad[] = [
   { id: 1, nombre: "Metegol", descripcion: "Ideal para jugar con tus amigos", icono: "🏆",  imagen: "https://images.unsplash.com/photo-1529336322266-4915f4295abc?w=400&h=300&fit=crop" },
-  { id: 2, nombre: "Sala de Fútbol", descripcion: "Matches intensos de Fútbol", icono: "⚽", imagen: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=400&h=300&fit=crop", video: "/play-house/futbol.mp4" },
-  { id: 3, nombre: "Simulador", descripcion: "Competencia de Carreras", icono: "🎮", imagen: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop", video: "/play-house/simulador.mp4" },
-  { id: 4, nombre: "Mesa de Cumpleaños", descripcion: "exceente lugar para comer con tus amigos", icono: "🎂", imagen: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=300&fit=crop", video: "/play-house/salon.mp4" },
-  { id: 5, nombre: "Karaoke", descripcion: "Canta tus hits favoritos", icono: "🎤", imagen: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=400&h=300&fit=crop", video: "/play-house/history.mp4" },
+  { id: 2, nombre: "Sala de Fútbol", descripcion: "Matches intensos de Fútbol", icono: "⚽", imagen: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=400&h=300&fit=crop", instagram: "https://www.instagram.com/reel/DW48Wl8iJoZ/" },
+  { id: 3, nombre: "Simulador", descripcion: "Competencia de Carreras", icono: "🎮", imagen: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop", instagram: "https://www.instagram.com/reel/DWcQ9OHiDoL/" },
+  { id: 4, nombre: "Mesa de Cumpleaños", descripcion: "exceente lugar para comer con tus amigos", icono: "🎂", imagen: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=300&fit=crop", instagram: "https://www.instagram.com/reel/DWwc0TQkcAq/" },
+  { id: 5, nombre: "Karaoke", descripcion: "Canta tus hits favoritos", icono: "🎤", imagen: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=400&h=300&fit=crop", instagram: "https://www.instagram.com/p/DWw6pO_PMij/" },
   { id: 6, nombre: "Sala de Maquillajes", descripcion: "Lugar para encontrarse con tu belleza", icono: "😍", imagen: "https://images.unsplash.com/photo-1622979135225-d2ba269fb1bd?w=400&h=300&fit=crop" },
 ]
 
@@ -64,10 +64,10 @@ const appHTML = `
     <div class="activities-grid">
       ${actividades.map(act => `
         <div class="activity-card">
-          <div class="activity-image ${act.video ? 'video-activity' : ''}" ${act.video ? `onclick="playVideo('${act.video}')"` : ''}>
+          <div class="activity-image ${act.instagram ? 'video-activity' : ''}" ${act.instagram ? `onclick="window.open('${act.instagram}', '_blank')"` : ''}>
             <img src="${act.imagen}" alt="${act.nombre}" />
             <div class="activity-icon">${act.icono}</div>
-            ${act.video ? '<div class="play-icon">▶</div>' : ''}
+            ${act.instagram ? '<div class="play-icon">▶</div>' : ''}
           </div>
           <h3>${act.nombre}</h3>
           <p>${act.descripcion}</p>
@@ -135,43 +135,6 @@ const appHTML = `
     <p>© Av. Alem 1415, Cipolletti, Rio Negro</p>
     <p>Diseñado por Gustavo Genco - Contacto: gustavogenconqn@gmail.com</p>
   </footer>
-
-  <div id="video-modal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal">&times;</span>
-      <video id="modal-video" controls autoplay></video>
-    </div>
-  </div>
 `
-
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = appHTML
-
-function playVideo(src: string) {
-  const modal = document.getElementById('video-modal')!;
-  const video = document.getElementById('modal-video') as HTMLVideoElement;
-  video.src = src;
-  modal.style.display = 'flex';
-  video.play();
-}
-
-(window as any).playVideo = playVideo;
-
-document.querySelector('.close-modal')?.addEventListener('click', () => {
-  const modal = document.getElementById('video-modal')!;
-  const video = document.getElementById('modal-video') as HTMLVideoElement;
-  video.pause();
-  video.src = '';
-  modal.style.display = 'none';
-});
-
-const modal = document.getElementById('video-modal');
-modal?.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    const video = document.getElementById('modal-video') as HTMLVideoElement;
-    video.pause();
-    video.src = '';
-    modal.style.display = 'none';
-  }
-});
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = appHTML
