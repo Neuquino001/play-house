@@ -142,14 +142,19 @@ const appHTML = `
       <video id="modal-video" controls autoplay></video>
     </div>
   </div>
+`
 
-function playVideo(src: string, title: string) {
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = appHTML
+
+function playVideo(src: string) {
   const modal = document.getElementById('video-modal')!;
   const video = document.getElementById('modal-video') as HTMLVideoElement;
   video.src = src;
   modal.style.display = 'flex';
   video.play();
 }
+
+(window as any).playVideo = playVideo;
 
 document.querySelector('.close-modal')?.addEventListener('click', () => {
   const modal = document.getElementById('video-modal')!;
@@ -159,6 +164,7 @@ document.querySelector('.close-modal')?.addEventListener('click', () => {
   modal.style.display = 'none';
 });
 
+const modal = document.getElementById('video-modal');
 modal?.addEventListener('click', (e) => {
   if (e.target === modal) {
     const video = document.getElementById('modal-video') as HTMLVideoElement;
@@ -167,6 +173,5 @@ modal?.addEventListener('click', (e) => {
     modal.style.display = 'none';
   }
 });
-`
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = appHTML
