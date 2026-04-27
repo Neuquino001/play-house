@@ -63,9 +63,9 @@ const appHTML = `
     <h2>Nuestras Actividades</h2>
     <div class="activities-grid">
       ${actividades.map(act => `
-        <div class="activity-card" onclick="${act.video ? `playVideo('${act.video}', '${act.nombre}')` : ''}">
-          <div class="activity-image">
-            ${act.video ? `<video id="video-${act.id}" src="${act.video}" muted loop playsinline></video>` : `<img src="${act.imagen}" alt="${act.nombre}" />`}
+        <div class="activity-card">
+          <div class="activity-image ${act.video ? 'video-activity' : ''}" ${act.video ? `onclick="playVideo('${act.video}')"` : ''}>
+            <img src="${act.imagen}" alt="${act.nombre}" />
             <div class="activity-icon">${act.icono}</div>
             ${act.video ? '<div class="play-icon">▶</div>' : ''}
           </div>

@@ -193,6 +193,10 @@ h1, h2, h3 {
   object-fit: cover;
 }
 
+.video-activity {
+  cursor: pointer;
+}
+
 .activity-icon {
   position: absolute;
   bottom: -20px;
