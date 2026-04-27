@@ -17,23 +17,23 @@ interface Paquete {
 }
 
 const actividades: Actividad[] = [
-  { id: 1, nombre: "Pool Ball", descripcion: "Mesas de pool profesional", icono: "🎱", imagen: "https://images.unsplash.com/photo-1529336322266-4915f4295abc?w=400&h=300&fit=crop" },
-  { id: 2, nombre: "Fútbol de Mesa", descripcion: "Matches intensos de foosball", icono: "⚽", imagen: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=400&h=300&fit=crop" },
-  { id: 3, nombre: "Arcade", descripcion: "Juegos clásicos y modernos", icono: "🕹️", imagen: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop" },
-  { id: 4, nombre: "Ping Pong", descripcion: "Mesas de ping pong profesional", icono: "🏓", imagen: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=300&fit=crop" },
+  { id: 1, nombre: "Metegol", descripcion: "Ideal para jugar con tus amigos", icono: "🎱", imagen: "https://images.unsplash.com/photo-1529336322266-4915f4295abc?w=400&h=300&fit=crop" },
+  { id: 2, nombre: "Sala de Fútbol", descripcion: "Matches intensos de Fútbol", icono: "⚽", imagen: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=400&h=300&fit=crop" },
+  { id: 3, nombre: "Simulador", descripcion: "Competencia de Carreras", icono: "🕹️", imagen: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop" },
+  { id: 4, nombre: "Mesa de Cumpleaños", descripcion: "exceente lugar para comer con tus amigos", icono: "🏓", imagen: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=300&fit=crop" },
   { id: 5, nombre: "Karaoke", descripcion: "Canta tus hits favoritos", icono: "🎤", imagen: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=400&h=300&fit=crop" },
-  { id: 6, nombre: "VR Experience", descripcion: "Realidad virtual inmersiva", icono: "🥽", imagen: "https://images.unsplash.com/photo-1622979135225-d2ba269fb1bd?w=400&h=300&fit=crop" },
+  { id: 6, nombre: "Sala de Maquillajes", descripcion: "Lugar para encontrarse con tu belleza", icono: "🥽", imagen: "https://images.unsplash.com/photo-1622979135225-d2ba269fb1bd?w=400&h=300&fit=crop" },
 ]
 
 const paquetes: Paquete[] = [
-  { id: 1, nombre: "Basic", precio: 25000, duracion: "3 horas", incluye: ["3 actividades", "2 bebidas", "Música"] },
-  { id: 2, nombre: "Premium", precio: 40000, duracion: "4 horas", incluye: ["Todas las actividades", "Bebidas ilimitadas", "Picada", "Música", "Karaoke"] },
+  { id: 1, nombre: "Basic", precio: 15000, duracion: "1 horas", incluye: ["3 actividades", "2 bebidas", "Música"] },
+  { id: 2, nombre: "Premium", precio: 25000, duracion: "2 horas", incluye: ["Todas las actividades", "Bebidas ilimitadas", "Picada", "Música", "Karaoke"] },
   { id: 3, nombre: "VIP", precio: 60000, duracion: "5 horas", incluye: ["Todo del Premium", "Cumpleañero gratis", "Pastel", "Souvenirs", "Video/fotos"] },
 ]
 
 const appHTML = `
   <header class="header">
-    <div class="logo"><img src="/play-house/image.png" /><img src="/play-house/nombre.jpg" /></div>
+    <div class="logo">🎮 La Play House</div>
     <nav class="nav">
       <a href="#actividades">Actividades</a>
       <a href="#paquetes">Paquetes</a>
@@ -44,7 +44,7 @@ const appHTML = `
   <section class="hero">
     <div class="hero-content">
       <h1>El Mejor Cumpleaños<br>Esta Aquí! 🎉</h1>
-      <p class="subtitle">Sala de diversiones para niños desde 10 años</p>
+      <p class="subtitle">Sala de diversiones para chicos desde 10 años</p>
       <p class="subtitle">¡Diversión asegurada en tu día especial!</p>
       <a href="#paquetes" class="btn-primary">Ver Paquetes</a>
     </div>
@@ -64,7 +64,7 @@ const appHTML = `
       ${actividades.map(act => `
         <div class="activity-card">
           <div class="activity-image">
-            <img src="${act.imagen}" alt="${act.nombre}" />
+            <img src="/play-house${act.imagen}" alt="${act.nombre}" />
             <div class="activity-icon">${act.icono}</div>
           </div>
           <h3>${act.nombre}</h3>
@@ -86,7 +86,7 @@ const appHTML = `
           <ul class="includes">
             ${pq.incluye.map(item => `<li>✓ ${item}</li>`).join('')}
           </ul>
-          <button class="btn-secondary" onclick="window.open('https://wa.me/5491112345678?text=Hola!%20Quiero%20el%20paquete%20${encodeURIComponent(pq.nombre)}', '_blank')">
+          <button class="btn-secondary" onclick="window.open('https://wa.me/5492993260471?text=Hola!%20Quiero%20el%20paquete%20${encodeURIComponent(pq.nombre)}', '_blank')">
             Reservar 💬
           </button>
         </div>
@@ -123,13 +123,14 @@ const appHTML = `
   <section id="contacto" class="section alt">
     <h2>¡Reservá tu fecha!</h2>
     <p class="contact-text">Escríbenos por WhatsApp para reservar tu cumpleaños</p>
-    <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20información%20para%20mi%20cumpleaños" class="btn-whatsapp">
+    <a href="https://wa.me/5492993260471?text=Hola!%20Quiero%20información%20para%20mi%20cumpleaños" class="btn-whatsapp">
       💬 Escribinos por WhatsApp
     </a>
   </section>
 
-  <footer class="footer">
-    <p>© 2026 The Play House - Diversión garantizada 🎮</p>
+<footer class="footer">
+    <p>© 2026 La Play House - Diversión garantizada 🎮</p>
+    <p>© Av. Alem 1415, Cipolletti, Rio Negro</p>
     <p>Diseñado por Gustavo Genco - Contacto: gustavogenconqn@gmail.com</p>
   </footer>
 `
