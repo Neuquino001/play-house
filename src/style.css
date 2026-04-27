@@ -238,6 +238,13 @@ h1, h2, h3 {
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.package-card .includes {
+  flex: 1;
 }
 
 .package-card.featured {
@@ -296,6 +303,7 @@ h1, h2, h3 {
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s;
+  margin-top: auto;
 }
 
 .btn-secondary:hover {
