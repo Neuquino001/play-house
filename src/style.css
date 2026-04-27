@@ -50,8 +50,13 @@ h1, h2, h3 {
   gap: 0.5rem;
 }
 
-.logo img {
-  height: 50px;
+.logo img:first-child {
+  height: 60px;
+  width: auto;
+}
+
+.logo img:last-child {
+  height: 40px;
   width: auto;
 }
 
