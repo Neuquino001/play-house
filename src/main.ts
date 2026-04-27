@@ -33,7 +33,7 @@ const paquetes: Paquete[] = [
 
 const appHTML = `
   <header class="header">
-    <div class="logo"><img src="/image.png" /><img src="/nombre.jpg" /></div>
+    <div class="logo"><img src="/play-house/image.png" /><img src="/play-house/nombre.jpg" /></div>
     <nav class="nav">
       <a href="#actividades">Actividades</a>
       <a href="#paquetes">Paquetes</a>
