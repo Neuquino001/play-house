@@ -380,19 +380,32 @@ h1, h2, h3 {
   .hero h1 {
     font-size: 2.2rem;
   }
-  
+
+  .hero {
+    background-attachment: scroll;
+  }
+
   .header {
     flex-direction: column;
     gap: 1rem;
+    padding: 0.8rem 1rem;
   }
-  
+
   .nav {
     gap: 1rem;
     font-size: 0.9rem;
   }
-  
+
   .package-card.featured {
     transform: scale(1);
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .activity-image {
+    height: 150px;
   }
 
   .play-icon {
@@ -414,10 +427,11 @@ h1, h2, h3 {
   .modal {
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 400px;
-    height: 225px;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    height: 200px;
     background: rgba(0,0,0,0.95);
     z-index: 1000;
     border-radius: 12px;
@@ -453,5 +467,47 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
     border: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .logo img:first-child {
+    height: 60px;
+  }
+
+  .logo img:last-child {
+    height: 40px;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .price {
+    font-size: 1.8rem;
+  }
+
+  .package-card {
+    padding: 1.5rem;
+  }
+
+  .icons-float span {
+    font-size: 1.5rem;
+  }
+
+  .icons-float {
+    gap: 0.5rem;
+  }
+
+  .hero-content {
+    padding: 0 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
   }
 }
